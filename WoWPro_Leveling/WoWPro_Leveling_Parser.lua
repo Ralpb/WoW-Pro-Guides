@@ -558,7 +558,7 @@ function WoWPro_Leveling:RegisterEvents()
 		if event == "UI_INFO_MESSAGE" then
 			for i = 1,15 do
 				local index = WoWPro.rows[i].index
-				if ... == ERR_NEWTAXIPATH and actions[index] == "f" then
+				if ... == ERR_NEWTAXIPATH and WoWPro_LevelingDB[WoWPro_LevelingDB.currentguide].actions[index] == "f" then
 					WoWPro_LevelingDB[WoWPro_LevelingDB.currentguide].completion[index] = true
 					if not WoWPro_Leveling.combat then WoWPro_Leveling:UpdateGuide() end
 					WoWPro_Leveling:MapPoint()
