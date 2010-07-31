@@ -30,7 +30,7 @@ function WoWPro_Leveling.UpdateGuideList()
 			row.range:SetText("("..startlevel.."-"..endlevel..")")
 			row.guide = GID
 			
-			if WoWPro_LevelingDB[GID] and WoWPro_LevelingDB[GID].total then
+			if WoWPro_LevelingDB[GID] and WoWPro_LevelingDB[GID].progress and WoWPro_LevelingDB[GID].total then
 				row.progress:SetText(WoWPro_LevelingDB[GID].progress.."/"..WoWPro_LevelingDB[GID].total)
 			else 
 				row.progress:SetText("")
